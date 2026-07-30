@@ -1,41 +1,118 @@
-<img align="right" src="https://visitor-badge.laobi.icu/badge?page_id=UtkarshOver9000.UtkarshOver9000" />
+<div align="center">
 
-<h1 align="center">
-    <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hola+Amigo!+👋;+Call+Me+Utkarsh+AKA+XEN!;" />
-</h1>
-# 💫 About Me:
-🔭 I’m currently working on how to make a Database with Agentic AI.<br>👯 I’m looking to collaborate on AI/ML and CP grind.<br>🤝 I’m looking for help with LLMs , AI Agents Workflow.<br>🌱 I’m currently learning how to make machines work opposite a screen.<br>💬 Ask me about Anything about Tech<br>⚡ Fun fact I always seek More
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=26&duration=3000&pause=800&color=8B5E3C&center=true&vCenter=true&width=600&lines=Hey%2C+I'm+Utkarsh+%F0%9F%A6%A5;MLOps+%2B+Security+ML+%2B+AI+Systems;I+build+slow%2C+deliberate%2C+very+solid+things;Currently+debugging+something+at+2am" alt="Typing SVG" />
 
-
-## 🌐 Socials:
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/utkarsh.over9000) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/utkarsh-sharma-lm10) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:utkarshs123op@gmail.com) 
-
-# 💻 Tech Stack:
-![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![PowerShell](https://img.shields.io/badge/PowerShell-%235391FE.svg?style=for-the-badge&logo=powershell&logoColor=white) ![Windows Terminal](https://img.shields.io/badge/Windows%20Terminal-%234D4D4D.svg?style=for-the-badge&logo=windows-terminal&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) ![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi) ![Apache](https://img.shields.io/badge/apache-%23D42029.svg?style=for-the-badge&logo=apache&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) ![Adobe](https://img.shields.io/badge/adobe-%23FF0000.svg?style=for-the-badge&logo=adobe&logoColor=white) ![Adobe Photoshop](https://img.shields.io/badge/adobe%20photoshop-%2331A8FF.svg?style=for-the-badge&logo=adobe%20photoshop&logoColor=white) ![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) ![mlflow](https://img.shields.io/badge/mlflow-%23d9ead3.svg?style=for-the-badge&logo=numpy&logoColor=blue) ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black) ![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white) ![Plotly](https://img.shields.io/badge/Plotly-%233F4F75.svg?style=for-the-badge&logo=plotly&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white) ![Scipy](https://img.shields.io/badge/SciPy-%230C55A5.svg?style=for-the-badge&logo=scipy&logoColor=%white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![GitLab](https://img.shields.io/badge/gitlab-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white) ![Selenium](https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
-# 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=UtkarshOver9000&theme=dracula&hide_border=false&include_all_commits=true&count_private=true)<br/>
-![](https://nirzak-streak-stats.vercel.app/?user=UtkarshOver9000&theme=dracula&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=UtkarshOver9000&theme=dracula&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
-
-### ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=merko)
+</div>
 
 ---
-[![](https://visitcount.itsvg.in/api?id=UtkarshOver9000&icon=4&color=5)](https://visitcount.itsvg.in)
 
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+### 🦥 About Me
+
+I move like a sloth, ship like it too — slow, deliberate, hard to knock off the branch.
+I work across **MLOps**, **security ML**, and general **AI systems** — the stuff that has to actually run in production, not just work in a notebook.
+
+- 🔐 Interested in ML for security: anomaly detection, auth/fraud signals, threat modeling
+- ⚙️ Into MLOps: pipelines, deployment, monitoring, making models survive contact with reality
+- 🧠 Generally curious about AI systems end-to-end — not just models, the whole stack around them
+- 🛠️ I build weird, sometimes overbuilt things because "why not"
+
+---
+
+### 🧰 Tech Stack
+
+<div align="center">
+<img src="https://skillicons.dev/icons?i=python,pytorch,tensorflow,docker,kubernetes,git,linux,fastapi,postgres,aws,githubactions,bash&perline=6" />
+</div>
+
+---
+
+### 📊 GitHub Stats
+
+<div align="center">
+
+<img src="https://github-readme-stats.vercel.app/api?username=UtkarshOver9000&show_icons=true&theme=algolia&hide_border=true&count_private=true" height="165"/>
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=UtkarshOver9000&theme=algolia&hide_border=true" height="165"/>
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=UtkarshOver9000&layout=compact&theme=algolia&hide_border=true" height="165"/>
+
+</div>
+
+---
+
+### 🦥 Contribution Graph — Sloth Mode
+
+<div align="center">
+
+<!-- This uses the Platane/snk action but recolored to a mossy sloth palette instead of the default snake colors -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/UtkarshOver9000/UtkarshOver9000/output/github-sloth-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/UtkarshOver9000/UtkarshOver9000/output/github-sloth.svg" />
+  <img alt="sloth eating contributions" src="https://raw.githubusercontent.com/UtkarshOver9000/UtkarshOver9000/output/github-sloth.svg" />
+</picture>
+
+*(one contribution eaten per nap — see setup note below)*
+
+</div>
+
+---
+
+### 📫 Reach Me
+
+<div align="center">
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/utkarsh-sharma-lm10)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:utkarshs123op@gmail.com)
+
+</div>
+
+<div align="center">
+<img src="https://komarev.com/ghpvc/?username=UtkarshOver9000&label=Profile+Views&color=8B5E3C&style=flat" />
+</div>
+
+---
 
 <!--
-**UtkarshOver9000/UtkarshOver9000** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+SETUP NOTES:
 
-Here are some ideas to get you started:
+1. Create a repo named exactly "UtkarshOver9000" (must match your username) if you don't have one yet.
+   Put this file in it as README.md — it auto-renders on your profile page.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+2. Typing header / stats / streak / top-langs / visitor counter all work immediately,
+   no setup needed — they're hosted services pulling live from your GitHub username.
+
+3. For the "sloth mode" contribution graph:
+   - This is really the Platane/snk action, just recolored (browns/mossy greens instead of green/snake colors)
+   - It needs a GitHub Action to generate it. Add this file as
+     .github/workflows/sloth.yml in your UtkarshOver9000 repo:
+
+     name: generate sloth graph
+     on:
+       schedule:
+         - cron: "0 */12 * * *"
+       workflow_dispatch:
+       push:
+         branches: [main]
+     jobs:
+       build:
+         runs-on: ubuntu-latest
+         steps:
+           - uses: actions/checkout@v4
+           - uses: Platane/snk/svg-only@v3
+             with:
+               github_user_name: ${{ github.repository_owner }}
+               outputs: |
+                 dist/github-sloth.svg?color_snake=%238B5E3C&color_dots=#e8dcd0,#c9b8a3,#a68b6f,#8b6f4e,#6b4f2e
+                 dist/github-sloth-dark.svg?palette=github-dark&color_snake=%23c9a679
+           - uses: crazy-max/ghaction-github-pages@v3
+             with:
+               target_branch: output
+               build_dir: dist
+             env:
+               GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+   - Enable Actions in repo Settings if prompted, then run it once manually
+     (Actions tab -> the workflow -> "Run workflow") so the "output" branch exists.
+   - The image URLs in this README already point at the right paths once that's live.
+
+4. Swap the LinkedIn/Email badge links (the "#") for your real profile + mailto link.
 -->
