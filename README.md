@@ -1,11 +1,11 @@
 <img align="right" src="https://visitor-badge.laobi.icu/badge?page_id=UtkarshOver9000.UtkarshOver9000" />
 
 <h1 align="center">
-    <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hola+Amigo!+👋;+Call+Me+Utkarsh+AKA+XEN!;" />
+    <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hola+Amigo!+👋;+Myself+Utkarsh+AKA+Xeno!;" />
 </h1>
 
 # 💫 About Me:
-🔭 I'm currently working on how to make a Database with Agentic AI.<br>👯 I'm looking to collaborate on AI/ML and CP grind.<br>🤝 I'm looking for help with LLMs , AI Agents Workflow.<br>🌱 I'm currently learning how to make machines work opposite a screen.<br>💬 Ask me about Anything about Tech<br>⚡ Fun fact I always seek More
+🔭  I'm looking to collaborate on AI/ML and CP grind.<br>🤝 I'm looking for help with LLMs , AI Agents Workflow.<br>🌱 I'm currently learning how to make machines work opposite a screen.<br>💬 Ask me about Anything about Tech<br>⚡ Fun fact I always seek More
 
 
 ## 🌐 Socials:
