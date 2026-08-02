@@ -8,17 +8,78 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
-      - uses: Platane/snk/svg-only@v3
+
+      - name: Generate snake SVGs
+        uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
             dist/github-sloth.svg?color_snake=%238B5E3C&color_dots=#e8dcd0,#c9b8a3,#a68b6f,#8b6f4e,#6b4f2e
             dist/github-sloth-dark.svg?palette=github-dark&color_snake=%23c9a679
-      - uses: crazy-max/ghaction-github-pages@v3
+
+      - name: Overlay SLOTH pixel art text
+        run: |
+          python3 - << 'PYEOF'
+          FONT = {
+            'S': ["01110","10000","01110","00001","11110"],
+            'L': ["10000","10000","10000","10000","11111"],
+            'O': ["01110","10001","10001","10001","01110"],
+            'T': ["11111","00100","00100","00100","00100"],
+            'H': ["10001","10001","11111","10001","10001"],
+          }
+
+          def pixel_text(word, x0, y0, size=4, color="#8B5E3C"):
+            rects = []
+            x = x0
+            for ch in word:
+              rows = FONT.get(ch, [])
+              for r, row in enumerate(rows):
+                for c, px in enumerate(row):
+                  if px == '1':
+                    rects.append(
+                      f'<rect x="{x + c*size}" y="{y0 + r*size}" '
+                      f'width="{size-1}" height="{size-1}" fill="{color}" rx="1"/>'
+                    )
+              x += 5*size + size
+            return '\n'.join(rects)
+
+          files = {
+            "dist/github-sloth.svg":      ("#8B5E3C", "#fff"),
+            "dist/github-sloth-dark.svg": ("#c9a679", "#1a1a2e"),
+          }
+
+          for fname, (color, bg) in files.items():
+            try:
+              with open(fname) as f:
+                svg = f.read()
+
+              sloth_rects = pixel_text("SLOTH", x0=12, y0=10, size=5, color=color)
+
+              # Make a little bg pill behind the letters so it's always readable
+              pill = (
+                f'<rect x="8" y="6" width="{5*6*5 + 4*5 + 4}" height="32" '
+                f'rx="6" fill="{bg}" fill-opacity="0.55"/>'
+              )
+
+              inject = f'\n{pill}\n{sloth_rects}\n'
+              svg = svg.replace('</svg>', inject + '</svg>')
+
+              with open(fname, 'w') as f:
+                f.write(svg)
+              print(f"Patched {fname}")
+            except FileNotFoundError:
+              print(f"Missing: {fname}")
+          PYEOF
+
+      - name: Push to output branch
+        uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: output
           build_dir: dist
+          commit_message: "Update sloth contribution graph with SLOTH pixel art"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
