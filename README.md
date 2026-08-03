@@ -4,8 +4,8 @@
     <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hola+Amigo!+👋;+Myself+Utkarsh+AKA+Xeno!;" />
 </h1>
 
-# 💫 About Me:
-🔭  I'm looking to collaborate on AI/ML and CP grind.<br>🤝 I'm looking for help with LLMs , AI Agents Workflow.<br>🌱 I'm currently learning how to make machines work opposite a screen.<br>💬 Ask me about Anything about Tech<br>⚡ Fun fact I always seek More
+#  About Me:
+  I'm looking to collaborate on AI/ML and CP grind.<br> I'm looking for help with LLMs , AI Agents Workflow.<br> I'm currently learning how to make machines work opposite a screen.<br> Ask me about Anything about Tech<br> Fun fact I always seek More
 
 
 ## 🌐 Socials:
