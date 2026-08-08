@@ -79,17 +79,19 @@ Ask me about anything tech-related. Fun fact: I always seek more.
 
 ## 📊 GitHub Stats
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/UtkarshOver9000/UtkarshOver9000/output/profile-summary-card-output/dracula/0-profile-details.svg" width="49%" />
-  <img src="https://raw.githubusercontent.com/UtkarshOver9000/UtkarshOver9000/output/profile-summary-card-output/dracula/3-stats.svg" width="49%" />
-</p>
-<p align="center">
-  <img src="https://raw.githubusercontent.com/UtkarshOver9000/UtkarshOver9000/output/profile-summary-card-output/dracula/1-repos-per-language.svg" width="32%" />
-  <img src="https://raw.githubusercontent.com/UtkarshOver9000/UtkarshOver9000/output/profile-summary-card-output/dracula/2-most-commit-language.svg" width="32%" />
-  <img src="https://raw.githubusercontent.com/UtkarshOver9000/UtkarshOver9000/output/profile-summary-card-output/dracula/4-productive-time.svg" width="32%" />
-</p>
+*(The old stats/top-langs widgets pointed at `github-readme-stats.vercel.app`, which is
+now permanently down — `503 DEPLOYMENT_PAUSED`. Swapped to a different maintained
+instance below; if this one ever dies too, the fix is just swapping the domain.)*
 
-*(Self-hosted via GitHub Actions — [`vn7n24fzkq/github-profile-summary-cards`](https://github.com/vn7n24fzkq/github-profile-summary-cards) — rather than a shared public widget, so it doesn't silently go down like the old ones did. Refreshes daily.)*
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=UtkarshOver9000&theme=dracula" width="49%" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=UtkarshOver9000&theme=dracula" width="49%" />
+</p>
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=UtkarshOver9000&theme=dracula" width="32%" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=UtkarshOver9000&theme=dracula" width="32%" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=UtkarshOver9000&theme=dracula" width="32%" />
+</p>
 
 <p align="center">
   <img src="https://streak-stats.demolab.com/?user=UtkarshOver9000&theme=dracula&hide_border=false" />
