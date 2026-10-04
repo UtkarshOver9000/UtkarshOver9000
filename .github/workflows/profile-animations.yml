@@ -1,6 +1,6 @@
 name: Profile animations
 
-# Rebuilds the live README cards (hero, profile scan, contribution graph,
+# Rebuilds the live README cards (profile scan, contribution graph,
 # dev quote) from today's GitHub data. They're force-pushed to a one-commit
 # `output` branch so main's history stays clean.
 

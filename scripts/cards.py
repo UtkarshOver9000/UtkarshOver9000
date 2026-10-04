@@ -1,6 +1,6 @@
 """Aurora-style animated cards for the profile README (GitSkins look).
 
-    python scripts/cards.py live dist      # hero, scan, contrib, quote: needs GITHUB_TOKEN + Pillow
+    python scripts/cards.py live dist      # scan, contrib, quote: needs GITHUB_TOKEN + Pillow
     python scripts/cards.py static assets  # wordmark, tech stack: fetches Simple Icons once
 
 Every card is a standalone animated SVG. Base styles are the final state, so a
@@ -110,9 +110,10 @@ FONT = {
 
 
 def wordmark(text="UTKARSH"):
-    w, h, pitch, size = 860, 280, 19, 15
+    w, h, pitch, size = 860, 360, 19, 15
     cols = len(text) * 6 - 1
     x0, y0 = (w - (cols * pitch - (pitch - size))) // 2, 80
+    rx, ry = 762, 290
     deep, mid, top = [], [], []
     for li, ch in enumerate(text):
         for r, row in enumerate(FONT[ch]):
@@ -133,12 +134,20 @@ def wordmark(text="UTKARSH"):
 @keyframes drop{{from{{opacity:0;transform:translateY(-34px)}}}}
 @keyframes wave{{0%,60%,100%{{fill:{TEAL}}}25%{{fill:#ecfeff}}}}
 .tag{{animation:rise .8s ease-out 1.6s both}}
+.orbit{{animation:spin 6s linear infinite;transform-origin:{rx}px {ry}px}}
+.pulse{{animation:pulse 2.6s ease-in-out infinite}}
+@keyframes spin{{to{{transform:rotate(360deg)}}}}
+@keyframes pulse{{50%{{opacity:.55}}}}
 """
     body = f"""
 <g class="deep" fill="#06302c">{''.join(deep)}</g>
 <g class="mid" fill="#0f766e">{''.join(mid)}</g>
 <g class="top">{''.join(top)}</g>
-<text class="mono tag" x="{w / 2}" y="{y0 + 7 * pitch + 44}" text-anchor="middle" font-size="15" fill="{MINT}">&gt; ml · security · energy — always over 9000<tspan class="cursor">_</tspan></text>"""
+<text class="mono tag" x="48" y="{ry + 6}" font-size="15" fill="{MINT}">&gt; ml · security · energy — always over 9000<tspan class="cursor">_</tspan></text>
+<g class="tag" fill="none" stroke="{MINT}"><circle cx="{rx}" cy="{ry}" r="56" stroke-opacity=".2"/><circle cx="{rx}" cy="{ry}" r="44" stroke-opacity=".35"/></g>
+<g class="orbit"><circle cx="{rx + 56}" cy="{ry}" r="4" fill="{MINT}"/></g>
+<text class="pulse" x="{rx}" y="{ry + 4}" text-anchor="middle" font-size="28" font-weight="800" fill="{MINT}">9000+</text>
+<text x="{rx}" y="{ry + 24}" text-anchor="middle" font-size="10" font-weight="700" letter-spacing="3" fill="{MINT}">POWER LEVEL</text>"""
     return terminal(w, h, "utkarshover9000@github: ~$ ./wordmark.sh --name", text, body, css)
 
 
@@ -225,37 +234,6 @@ def data_uri(img):
 def contact(user):
     site = (user.get("websiteUrl") or "").split("://")[-1].removeprefix("www.").rstrip("/")
     return site or f"github.com/{user['login']}"
-
-
-# ------------------------------------------------------------------ hero
-
-def hero(user):
-    w, h = 860, 250
-    name = user["name"] or user["login"]
-    bio = textwrap.wrap(user["bio"] or "", 52)[:2]
-    bio_lines = "".join(f'<tspan x="206" dy="{0 if i == 0 else 22}">{escape(line)}</tspan>' for i, line in enumerate(bio))
-    css = f"""
-.spin{{animation:spin 18s linear infinite;transform-origin:110px 125px}}
-.spin2{{animation:spin 26s linear infinite reverse;transform-origin:762px 118px}}
-.pulse{{animation:pulse 2.6s ease-in-out infinite}}
-@keyframes spin{{to{{transform:rotate(360deg)}}}}
-@keyframes pulse{{50%{{opacity:.55}}}}
-"""
-    defs = '<clipPath id="av"><circle cx="110" cy="125" r="60"/></clipPath>'
-    body = f"""
-<circle cx="110" cy="125" r="70" fill="none" stroke="{TEAL}" stroke-opacity=".25" stroke-width="2"/>
-<circle class="spin" cx="110" cy="125" r="70" fill="none" stroke="{MINT}" stroke-width="2.5" stroke-dasharray="60 380" stroke-linecap="round"/>
-<image href="{data_uri(user['avatar'])}" x="50" y="65" width="120" height="120" clip-path="url(#av)" preserveAspectRatio="xMidYMid slice"/>
-<circle cx="110" cy="125" r="60" fill="none" stroke="{TEAL}" stroke-width="2"/>
-<text class="mono rise" x="208" y="74" font-size="14" font-weight="700" letter-spacing="2" fill="{MINT}">@{escape(user['login'].lower())}</text>
-<text class="rise" x="204" y="126" font-size="46" font-weight="800" fill="{INK}" style="animation-delay:.15s">{escape(name)}</text>
-<text class="rise" x="206" y="158" font-size="16" fill="{SOFT}" style="animation-delay:.3s">{bio_lines}</text>
-<text class="mono rise" x="206" y="{158 + 22 * len(bio) + 18}" font-size="13" fill="{MINT}" style="animation-delay:.45s">&gt; {STATUS.lower()}<tspan class="cursor">_</tspan></text>
-<g opacity=".55" fill="none" stroke="{MINT}"><circle cx="762" cy="118" r="62" stroke-opacity=".25"/><circle cx="762" cy="118" r="46" stroke-opacity=".35"/></g>
-<g class="spin2"><circle cx="824" cy="118" r="4" fill="{MINT}"/></g>
-<text class="pulse" x="762" y="120" text-anchor="middle" font-size="30" font-weight="800" fill="{MINT}">9000+</text>
-<text x="762" y="142" text-anchor="middle" font-size="10" font-weight="700" letter-spacing="3" fill="{MINT}">POWER LEVEL</text>"""
-    return aurora(w, h, f"{name}: {user['bio'] or ''}", body, css, defs)
 
 
 # ------------------------------------------------------------------ scan
@@ -525,7 +503,6 @@ def main():
             "active": sum(1 for d in days if d["contributionCount"]),
         }
         cards = {
-            "hero.svg": hero(user),
             "scan.svg": scan(user, stats),
             "contrib.svg": contrib(cal["weeks"], cal["totalContributions"]),
             "dev-quote.svg": quote(),

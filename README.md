@@ -3,10 +3,6 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/UtkarshOver9000/UtkarshOver9000/output/hero.svg" width="100%" alt="Utkarsh Sharma: ML &amp; security engineer. Real data, held-out tests, honest numbers." />
-</p>
-
-<p align="center">
   <a href="https://www.linkedin.com/in/utkarsh-sharma-15845a319"><img src="https://img.shields.io/badge/LinkedIn-0b2624?style=for-the-badge&logo=linkedin&logoColor=5eead4" alt="LinkedIn" /></a>
   <a href="mailto:utkarshs123op@gmail.com"><img src="https://img.shields.io/badge/Email-0b2624?style=for-the-badge&logo=gmail&logoColor=5eead4" alt="Email" /></a>
   <a href="https://instagram.com/utkarsh.over9000"><img src="https://img.shields.io/badge/Instagram-0b2624?style=for-the-badge&logo=instagram&logoColor=5eead4" alt="Instagram" /></a>
@@ -83,5 +79,5 @@ data source, in the project's README.
 </p>
 
 <p align="center">
-  <sub>Highlights, projects and stats cards by <a href="https://www.gitskins.com">GitSkins</a> · wordmark, hero, scan, contribution, stack and quote cards built by <a href="scripts/cards.py">scripts/cards.py</a>, live ones refreshed daily</sub>
+  <sub>Highlights, projects and stats cards by <a href="https://www.gitskins.com">GitSkins</a> · wordmark, scan, contribution, stack and quote cards built by <a href="scripts/cards.py">scripts/cards.py</a>, live ones refreshed daily</sub>
 </p>
