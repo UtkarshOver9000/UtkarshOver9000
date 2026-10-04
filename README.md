@@ -1,25 +1,22 @@
 <p align="center">
-  <img src="https://www.gitskins.com/api/section/wordmark?username=UtkarshOver9000&theme=aurora&label=UTKARSH" width="100%" alt="UTKARSH in animated 3D ASCII letters" />
+  <img src="assets/wordmark.svg" width="100%" alt="UTKARSH in animated 3D pixel letters" />
 </p>
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: light)" srcset="https://www.gitskins.com/api/section/hero?username=UtkarshOver9000&theme=aurora&mode=light" />
-    <img src="https://www.gitskins.com/api/section/hero?username=UtkarshOver9000&theme=aurora&mode=dark" width="100%" alt="Animated profile hero for Utkarsh (Xen)" />
-  </picture>
+  <img src="https://raw.githubusercontent.com/UtkarshOver9000/UtkarshOver9000/output/hero.svg" width="100%" alt="Utkarsh Sharma: ML &amp; security engineer. Real data, held-out tests, honest numbers." />
 </p>
 
 <p align="center">
   <a href="https://www.linkedin.com/in/utkarsh-sharma-15845a319"><img src="https://img.shields.io/badge/LinkedIn-0b2624?style=for-the-badge&logo=linkedin&logoColor=5eead4" alt="LinkedIn" /></a>
   <a href="mailto:utkarshs123op@gmail.com"><img src="https://img.shields.io/badge/Email-0b2624?style=for-the-badge&logo=gmail&logoColor=5eead4" alt="Email" /></a>
   <a href="https://instagram.com/utkarsh.over9000"><img src="https://img.shields.io/badge/Instagram-0b2624?style=for-the-badge&logo=instagram&logoColor=5eead4" alt="Instagram" /></a>
-  <img src="https://komarev.com/ghpvc/?username=UtkarshOver9000&color=0b2624&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile views" />
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=UtkarshOver9000.UtkarshOver9000&left_text=PROFILE%20VIEWS&left_color=%230b2624&right_color=%2314b8a6" height="28" alt="Profile views" />
 </p>
 
 ## Profile scan
 
 <p align="center">
-  <img src="https://www.gitskins.com/api/section/system-scan?username=UtkarshOver9000&theme=aurora" width="100%" alt="Animated ASCII profile scan" />
+  <img src="https://raw.githubusercontent.com/UtkarshOver9000/UtkarshOver9000/output/scan.svg" width="100%" alt="Profile scan: ASCII portrait resolving into the GitHub avatar, with live profile data" />
 </p>
 
 I build machine-learning and security projects and test them on **real public data**.
@@ -60,55 +57,22 @@ data source, in the project's README.
   <img src="https://www.gitskins.com/api/section/stats?username=UtkarshOver9000&theme=aurora" width="100%" alt="Animated GitHub stats" />
 </p>
 
-### Contribution graph · eraser mode
+### Contribution graph · ship + eraser
 
 <p align="center">
-  <img src="https://www.gitskins.com/api/section/heatmap?username=UtkarshOver9000&theme=aurora&style=erased" width="100%" alt="Contribution graph being erased cell by cell" />
-</p>
-
-### Contribution space shooter
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/UtkarshOver9000/UtkarshOver9000/output/space-shooter.gif" width="100%" alt="Contribution graph turned into a space shooter game" />
+  <img src="https://raw.githubusercontent.com/UtkarshOver9000/UtkarshOver9000/output/contrib.svg" width="100%" alt="Contribution graph: a ship fires at each day's cells and an eraser wipes them" />
 </p>
 
 ## Tech stack
 
 <p align="center">
-  <img src="https://www.gitskins.com/api/section/stack?username=UtkarshOver9000&theme=aurora" width="100%" alt="Animated language stack" />
-</p>
-
-<p align="center">
-  <b><code>MODEL</code></b>&nbsp;
-  <img src="https://img.shields.io/badge/Python-0b2624?style=for-the-badge&logo=python&logoColor=5eead4" alt="Python" />
-  <img src="https://img.shields.io/badge/scikit--learn-0b2624?style=for-the-badge&logo=scikitlearn&logoColor=5eead4" alt="scikit-learn" />
-  <img src="https://img.shields.io/badge/LightGBM-0b2624?style=for-the-badge&logo=microsoft&logoColor=5eead4" alt="LightGBM" />
-  <img src="https://img.shields.io/badge/pandas-0b2624?style=for-the-badge&logo=pandas&logoColor=5eead4" alt="pandas" />
-  <img src="https://img.shields.io/badge/DuckDB-0b2624?style=for-the-badge&logo=duckdb&logoColor=5eead4" alt="DuckDB" />
-  <br />
-  <b><code>SERVE</code></b>&nbsp;
-  <img src="https://img.shields.io/badge/FastAPI-0b2624?style=for-the-badge&logo=fastapi&logoColor=5eead4" alt="FastAPI" />
-  <img src="https://img.shields.io/badge/Next.js-0b2624?style=for-the-badge&logo=nextdotjs&logoColor=5eead4" alt="Next.js" />
-  <img src="https://img.shields.io/badge/React-0b2624?style=for-the-badge&logo=react&logoColor=5eead4" alt="React" />
-  <img src="https://img.shields.io/badge/Three.js-0b2624?style=for-the-badge&logo=threedotjs&logoColor=5eead4" alt="Three.js" />
-  <img src="https://img.shields.io/badge/TypeScript-0b2624?style=for-the-badge&logo=typescript&logoColor=5eead4" alt="TypeScript" />
-  <br />
-  <b><code>SHIP&nbsp;</code></b>&nbsp;
-  <img src="https://img.shields.io/badge/Docker-0b2624?style=for-the-badge&logo=docker&logoColor=5eead4" alt="Docker" />
-  <img src="https://img.shields.io/badge/GitHub_Actions-0b2624?style=for-the-badge&logo=githubactions&logoColor=5eead4" alt="GitHub Actions" />
-  <img src="https://img.shields.io/badge/Vercel-0b2624?style=for-the-badge&logo=vercel&logoColor=5eead4" alt="Vercel" />
+  <img src="assets/tech-stack.svg" width="100%" alt="Tech stack: Python, C++, C, Java, JavaScript, TypeScript, PyTorch, TensorFlow, scikit-learn, NumPy, pandas, Jupyter, FastAPI, React, Next.js, Docker, Git, Linux" />
 </p>
 
 ## Dev quote of the day
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/UtkarshOver9000/UtkarshOver9000/output/dev-quote.svg" width="100%" alt="Dev quote of the day" />
-</p>
-
-## Off the clock
-
-<p align="center">
-  <img src="https://www.gitskins.com/api/section/chess?username=UtkarshOver9000&theme=aurora" width="100%" alt="Animated chess replay" />
 </p>
 
 ---
@@ -119,5 +83,5 @@ data source, in the project's README.
 </p>
 
 <p align="center">
-  <sub>Animated sections by <a href="https://www.gitskins.com">GitSkins</a> · space shooter and quote card rebuilt daily by <a href=".github/workflows/profile-animations.yml">this repo's workflow</a></sub>
+  <sub>Highlights, projects and stats cards by <a href="https://www.gitskins.com">GitSkins</a> · wordmark, hero, scan, contribution, stack and quote cards built by <a href="scripts/cards.py">scripts/cards.py</a>, live ones refreshed daily</sub>
 </p>

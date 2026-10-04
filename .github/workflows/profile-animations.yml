@@ -1,8 +1,8 @@
 name: Profile animations
 
-# Rebuilds the two README visuals that GitSkins can't serve on request:
-# the contribution Space Shooter GIF and the dev-quote card. Both are
-# force-pushed to a one-commit `output` branch so main's history stays clean.
+# Rebuilds the live README cards (hero, profile scan, contribution graph,
+# dev quote) from today's GitHub data. They're force-pushed to a one-commit
+# `output` branch so main's history stays clean.
 
 on:
   schedule:
@@ -11,7 +11,7 @@ on:
   push:
     branches: [main]
     paths:
-      - scripts/quote_card.py
+      - scripts/cards.py
       - .github/workflows/profile-animations.yml
 
 permissions:
@@ -31,15 +31,12 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Render today's dev quote
-        run: python scripts/quote_card.py dist/dev-quote.svg
-
-      - name: Render contribution Space Shooter
+      - name: Render live cards
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python -m pip install --disable-pip-version-check "gh-space-shooter==2.0.4"
-          gh-space-shooter ${{ github.repository_owner }} --output dist/space-shooter.gif --strategy random --fps 30
+          python -m pip install --disable-pip-version-check pillow
+          python scripts/cards.py live dist
 
       - name: Publish to the output branch
         working-directory: dist
@@ -49,6 +46,6 @@ jobs:
           git init -q -b output
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add dev-quote.svg space-shooter.gif
-          git commit -qm "Update profile animations"
+          git add *.svg
+          git commit -qm "Update profile cards"
           git push -qf "https://x-access-token:${TOKEN}@github.com/${{ github.repository }}.git" output
