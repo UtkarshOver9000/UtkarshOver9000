@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://www.gitskins.com/api/section/wordmark?username=UtkarshOver9000&theme=aurora&label=XEN" width="100%" alt="XEN in animated 3D ASCII letters" />
+  <img src="https://www.gitskins.com/api/section/wordmark?username=UtkarshOver9000&theme=aurora&label=UTKARSH" width="100%" alt="UTKARSH in animated 3D ASCII letters" />
 </p>
 
 <p align="center">
