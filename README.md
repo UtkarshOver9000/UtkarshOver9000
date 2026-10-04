@@ -1,123 +1,95 @@
-<img align="right" src="https://visitor-badge.laobi.icu/badge?page_id=UtkarshOver9000.UtkarshOver9000" />
+# Hi, I'm Utkarsh (Xen)
 
-<h1 align="center">
-    <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=600&height=70&duration=4000&lines=Hola+Amigo!+👋;+Myself+Utkarsh+AKA+Xeno!;Building+AI%2FML+%2B+Security+tools;Always+Over+9000." />
-</h1>
+I build machine-learning and security projects and test them on **real public data**.
+Every number below comes from a held-out evaluation and is documented, with its data
+source, in the project's README.
 
-<p align="center">
-  <i>I make machines do things people said machines can't. AI/ML • LLMs • Security.</i>
-</p>
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/utkarsh-sharma-15845a319)
+[![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:utkarshs123op@gmail.com)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?logo=instagram&logoColor=white)](https://instagram.com/utkarsh.over9000)
 
----
+## Projects
 
-## 🚀 Featured Projects
+### Security
 
-Live, working demos — not just a description. Click through and try them yourself.
+**[Aegis: login risk scoring](https://github.com/UtkarshOver9000/Aegis-Auth-Anomaly-Engine)** · [live demo](https://impossible-travel-auth-anomaly-engi.vercel.app)
+Account-takeover and attack-IP models trained on the 31.3M-login RBA dataset, plus a
+physical impossible-travel check.
+- On 5.4M held-out logins, it catches 14 of 22 account takeovers while challenging 0.77%
+  of logins (ROC-AUC 0.978).
+- A second model flags attack-IP logins (ROC-AUC 0.749).
+- FastAPI · scikit-learn · DuckDB
 
-<table>
-<tr>
-<td width="50%" valign="top">
+**[Phishing URL detection](https://github.com/UtkarshOver9000/phishvpn-detection)** · [live demo](https://phishvpn-detection-ochre.vercel.app)
+Trained on PhiUSIIL (235,795 URLs) plus the Tranco top-1M.
+- Catches 63.2% of phishing domains live on the day of testing (OpenPhish), with 9 false
+  alarms per 10,000 real sites.
+- Includes an audit showing why this dataset's well-known ~100% scores are a URL-format
+  shortcut.
+- scikit-learn · FastAPI
 
-### 🛡️ [Impossible-Travel Auth Anomaly Engine](https://github.com/UtkarshOver9000/impossible-travel-auth-anomaly-engine)
-Real-time login anomaly detection combining an IsolationForest model with geo-velocity
-physics — flags logins that imply physically impossible travel speed.
+**[Scam Site Detector](https://github.com/UtkarshOver9000/scam-site-detector)**
+Browser extension with rule-based page scoring, measured on 235,795 real pages: few false
+alarms, low recall. The numbers are why the phishing model above exists.
+- TypeScript · Chrome extension API
 
-**[▶ Try the live sandbox](https://impossible-travel-auth-anomaly-engi.vercel.app)**
+### Energy (Smart India Hackathon 2026)
 
-- 96.6% precision · 100% recall · 98.3% F1 (benchmarked against an independent reference detector)
-- 19 tests, 87% coverage, CI on every push
-- `FastAPI` `scikit-learn` `pandas`
+**[AETHERGRID Ω](https://github.com/UtkarshOver9000/aethergrid-omega)**
+Uncertainty-aware demand optimisation for smart buildings: quantile forecasting, MPC and a
+safety shield.
+- The forecaster, run on 84 real Uttar Pradesh households (CEEW smart meters), cuts
+  day-ahead feeder scheduling error by 11.7% against the best naive method.
+- LightGBM · PuLP · Gymnasium · Streamlit
 
-</td>
-<td width="50%" valign="top">
+**[AETHERGRID World Sim](https://github.com/UtkarshOver9000/aethergrid-worldsim)** · [live 3D demo](https://aethergrid-worldsim.vercel.app)
+24-society electricity district in the browser. It ships with a reality check against real
+household meter data.
+- Python · Three.js
 
-### 🎣 [PhishVPN Detection](https://github.com/UtkarshOver9000/phishvpn-detection)
-Phishing-risk scoring for suspicious VPN sessions — full ML pipeline from synthetic
-data generation through training, evaluation, and a live scoring API.
+### Retrieval and forecasting
 
-**[▶ Try the live sandbox](https://phishvpn-detection-ochre.vercel.app)**
+**[AI Research Copilot](https://github.com/UtkarshOver9000/ai-research-copilot)** · [live demo](https://ai-research-copilot-3jwt.vercel.app)
+Citation-first document Q&A.
+- BM25 tuned on BEIR SciFact reaches nDCG@10 0.663 on held-out claims, nearly double the
+  previous LSA retriever's 0.348.
+- FastAPI · Next.js
 
-- 0.919 ROC-AUC · 84.6% recall on the phishing class
-- 27 tests, 86% coverage, CI on every push
-- `FastAPI` `scikit-learn` `pandas`
+**[Stock Price Movement Predictor](https://github.com/UtkarshOver9000/Stock-price-predictor)** · [dashboard](https://gcsrmstockpricepredictor-seven.vercel.app)
+Next-day direction for 12 US stocks over 104,565 trading days of full history.
+- No model beats a constant guess with statistical significance (every p > 0.17). The
+  project documents why.
 
-</td>
-</tr>
-</table>
+**[Crypto Surge Prediction](https://github.com/UtkarshOver9000/crypto-surge-prediction)**
+Nine years of Binance data for 100 coins.
+- Technical indicators don't predict 7-day +15% surges: test ROC-AUC 0.53, and the signal
+  loses to random picks in a fee-adjusted backtest. They do carry a modest volatility
+  signal (ROC-AUC 0.60).
 
-<details>
-<summary><b>🎓 Also: F.A.S.T — Futuristic AI Society of Tech</b> (NVIDIA Student Developer Ecosystem, SRMIST)</summary>
-<br>
+### Community
 
-Community site for an NVIDIA-backed AI/GPU-computing student community at SRMIST
-Kattankulathur. **[Visit the site](https://f-a-s-t-website-one.vercel.app/#/home)**
+**[F.A.S.T](https://github.com/UtkarshOver9000/F.A.S.T-website)** · [site](https://f-a-s-t-website-one.vercel.app)
+Website for the Futuristic AI Society of Tech, an NVIDIA Student Developer Ecosystem
+community at SRMIST Kattankulathur.
 
-</details>
+## Tools used in these projects
 
----
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?logo=javascript&logoColor=F7DF1E)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?logo=scikit-learn&logoColor=white)
+![LightGBM](https://img.shields.io/badge/LightGBM-2E7D32)
+![pandas](https://img.shields.io/badge/pandas-150458?logo=pandas&logoColor=white)
+![DuckDB](https://img.shields.io/badge/DuckDB-FFF000?logo=duckdb&logoColor=black)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)
+![Three.js](https://img.shields.io/badge/Three.js-000000?logo=threedotjs&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?logo=githubactions&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white)
 
-## 👋 About Me
+## About
 
-I'm looking to collaborate on AI/ML and competitive programming.
-I'm looking for help with LLMs and AI agent workflows.
-I'm currently learning how to make machines work opposite a screen.
-Ask me about anything tech-related. Fun fact: I always seek more.
-
----
-
-## 🌐 Socials
-
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/utkarsh.over9000)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/utkarsh-sharma-15845a319)
-[![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:utkarshs123op@gmail.com)
-
-## 💻 Tech Stack
-
-![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![PowerShell](https://img.shields.io/badge/PowerShell-%235391FE.svg?style=for-the-badge&logo=powershell&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) ![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black) ![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
-
----
-
-## 📊 GitHub Stats
-
-*(The old stats/top-langs widgets pointed at `github-readme-stats.vercel.app`, which is
-now permanently down — `503 DEPLOYMENT_PAUSED`. These are generated by a GitHub Action
-that commits static SVGs straight into this repo daily, so they don't depend on a
-third-party server staying up.)*
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/UtkarshOver9000/UtkarshOver9000/main/profile-summary-card-output/dracula/0-profile-details.svg" width="49%" />
-  <img src="https://raw.githubusercontent.com/UtkarshOver9000/UtkarshOver9000/main/profile-summary-card-output/dracula/3-stats.svg" width="49%" />
-</p>
-<p align="center">
-  <img src="https://raw.githubusercontent.com/UtkarshOver9000/UtkarshOver9000/main/profile-summary-card-output/dracula/1-repos-per-language.svg" width="32%" />
-  <img src="https://raw.githubusercontent.com/UtkarshOver9000/UtkarshOver9000/main/profile-summary-card-output/dracula/2-most-commit-language.svg" width="32%" />
-  <img src="https://raw.githubusercontent.com/UtkarshOver9000/UtkarshOver9000/main/profile-summary-card-output/dracula/4-productive-time.svg" width="32%" />
-</p>
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com/?user=UtkarshOver9000&theme=dracula&hide_border=false" />
-</p>
-
-### ✍️ Random Dev Quote
-
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=merko)
-
----
-
-## 🦥 Contribution Graph — Sloth Mode
-
-<div align="center">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/UtkarshOver9000/UtkarshOver9000/output/github-sloth-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/UtkarshOver9000/UtkarshOver9000/output/github-sloth.svg" />
-  <img alt="sloth eating my contributions" src="https://raw.githubusercontent.com/UtkarshOver9000/UtkarshOver9000/output/github-sloth.svg" />
-</picture>
-</div>
-
----
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=UtkarshOver9000&color=blue&style=flat" alt="profile views" />
-</p>
-
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+I like problems where the honest answer matters more than the impressive one. Open to
+collaborating on ML, security and energy projects.
