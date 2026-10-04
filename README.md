@@ -36,12 +36,12 @@ data source, in the project's README.
 ## Selected work
 
 <p align="center">
-  <img src="https://www.gitskins.com/api/section/projects?username=UtkarshOver9000&theme=aurora&repos=UtkarshOver9000/Aegis-Auth-Anomaly-Engine,UtkarshOver9000/phishvpn-detection,UtkarshOver9000/aethergrid-worldsim,UtkarshOver9000/ai-research-copilot" width="100%" alt="Animated selected projects" />
+  <img src="https://www.gitskins.com/api/section/projects?username=UtkarshOver9000&theme=aurora&repos=UtkarshOver9000/alibi,UtkarshOver9000/phishvpn-detection,UtkarshOver9000/aethergrid-worldsim,UtkarshOver9000/ai-research-copilot" width="100%" alt="Animated selected projects" />
 </p>
 
 | Project | Verified result | Stack | Links |
 | --- | --- | --- | --- |
-| 🛡️ **Aegis**: login risk scoring | Catches 14 of 22 account takeovers on 5.4M held-out logins while challenging 0.77% of logins (ROC-AUC 0.978). Second model flags attack-IP logins (0.749). | FastAPI · scikit-learn · DuckDB | [repo](https://github.com/UtkarshOver9000/Aegis-Auth-Anomaly-Engine) · [demo](https://impossible-travel-auth-anomaly-engi.vercel.app) |
+| 🛡️ **Alibi**: who's breaking in, how, and from where | Threat intelligence on a live 3D globe, built only on real public data: 1,020 breaches (16.3B accounts) and how each happened, 8,420 live malware servers, 430 criminal networks, this week's ransomware victims, 1,733 exploited flaws. Its sign-in model catches 14 of 22 account takeovers on 5.4M held-out logins while challenging 0.77% of logins (ROC-AUC 0.978). | FastAPI · scikit-learn · DuckDB · globe.gl | [repo](https://github.com/UtkarshOver9000/alibi) · [demo](https://impossible-travel-auth-anomaly-engi.vercel.app) |
 | 🎣 **Phishing URL detection** | Catches 63.2% of phishing domains live on the OpenPhish feed, with 9 false alarms per 10,000 real sites. Includes an audit of this dataset's ~100% URL-format shortcut. | scikit-learn · FastAPI | [repo](https://github.com/UtkarshOver9000/phishvpn-detection) · [demo](https://phishvpn-detection-ochre.vercel.app) |
 | 🧩 **Scam Site Detector** | Rule-based browser extension measured on 235,795 real pages: few false alarms, low recall. The numbers are why the phishing model exists. | TypeScript · Chrome extension API | [repo](https://github.com/UtkarshOver9000/scam-site-detector) |
 | ⚡ **AETHERGRID Ω** · SIH 2026 | On 84 real Uttar Pradesh households (CEEW smart meters), cuts day-ahead feeder scheduling error by 11.7% against the best naive method. | LightGBM · PuLP · Gymnasium · Streamlit | [repo](https://github.com/UtkarshOver9000/aethergrid-omega) |
