@@ -5,7 +5,6 @@
 <p align="center">
   <a href="https://www.linkedin.com/in/utkarsh-sharma-15845a319"><img src="https://img.shields.io/badge/LinkedIn-0b2624?style=for-the-badge&logo=linkedin&logoColor=5eead4" alt="LinkedIn" /></a>
   <a href="mailto:utkarshs123op@gmail.com"><img src="https://img.shields.io/badge/Email-0b2624?style=for-the-badge&logo=gmail&logoColor=5eead4" alt="Email" /></a>
-  <a href="https://instagram.com/utkarsh.over9000"><img src="https://img.shields.io/badge/Instagram-0b2624?style=for-the-badge&logo=instagram&logoColor=5eead4" alt="Instagram" /></a>
   <img src="https://visitor-badge.laobi.icu/badge?page_id=UtkarshOver9000.UtkarshOver9000&left_text=PROFILE%20VIEWS&left_color=%230b2624&right_color=%2314b8a6" height="28" alt="Profile views" />
 </p>
 
