@@ -1,8 +1,8 @@
 name: Profile animations
 
-# Rebuilds the live README cards (profile scan, contribution graph,
-# dev quote) from today's GitHub data. They're force-pushed to a one-commit
-# `output` branch so main's history stays clean.
+# Rebuilds the live README cards (profile scan, contribution graph) from
+# today's GitHub data and force-pushes them to a one-commit `output` branch,
+# then swaps in the day's quote on main (one small commit, only when it changes).
 
 on:
   schedule:
@@ -49,3 +49,12 @@ jobs:
           git add *.svg
           git commit -qm "Update profile cards"
           git push -qf "https://x-access-token:${TOKEN}@github.com/${{ github.repository }}.git" output
+
+      - name: Update the quote of the day
+        run: |
+          python scripts/cards.py quote README.md
+          if git diff --quiet README.md; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -qm "Update quote of the day" README.md
+          git push -q origin HEAD:main

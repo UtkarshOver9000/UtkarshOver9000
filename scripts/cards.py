@@ -1,10 +1,11 @@
-"""Aurora-style animated cards for the profile README (GitSkins look).
+"""Live cards and the daily quote for the profile README.
 
-    python scripts/cards.py live dist      # scan, contrib, quote: needs GITHUB_TOKEN + Pillow
-    python scripts/cards.py static assets  # wordmark, tech stack: fetches Simple Icons once
+    python scripts/cards.py live dist        # profile scan + contribution graph (needs GITHUB_TOKEN + Pillow)
+    python scripts/cards.py quote README.md  # rewrite the quote block between the quote markers
 
-Every card is a standalone animated SVG. Base styles are the final state, so a
+Each card is a standalone animated SVG. Base styles are the final state, so a
 renderer without CSS animation (or with reduced motion) still shows the card.
+The quote is plain Markdown so it reads like normal text on the profile.
 """
 
 import base64
@@ -24,7 +25,7 @@ SANS = "'Segoe UI', -apple-system, BlinkMacSystemFont, 'Noto Sans', Helvetica, A
 MONO = "ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace"
 TEAL, MINT, INK, SOFT = "#2dd4bf", "#5eead4", "#e6fffa", "#99f6e4"
 
-LANGUAGES = "Python · C++ · C · Java · JS · TS"
+LANGUAGES = "Python · TypeScript · JavaScript"
 FOCUS = "ML · Security · Energy"
 STATUS = "Building · Learning · Shipping"
 
@@ -94,109 +95,6 @@ def terminal(w, h, title, aria, body, css="", defs="", live=False):
 {body}
 <rect x=".5" y=".5" width="{w - 1}" height="{h - 1}" rx="16" fill="none" stroke="{TEAL}" stroke-opacity=".55"/>"""
     return svg(w, h, aria, css, inner, defs)
-
-
-# --------------------------------------------------------------- wordmark
-
-FONT = {
-    "U": ["1...1", "1...1", "1...1", "1...1", "1...1", "1...1", ".111."],
-    "T": ["11111", "..1..", "..1..", "..1..", "..1..", "..1..", "..1.."],
-    "K": ["1...1", "1..1.", "1.1..", "11...", "1.1..", "1..1.", "1...1"],
-    "A": [".111.", "1...1", "1...1", "11111", "1...1", "1...1", "1...1"],
-    "R": ["1111.", "1...1", "1...1", "1111.", "1.1..", "1..1.", "1...1"],
-    "S": [".1111", "1....", "1....", ".111.", "....1", "....1", "1111."],
-    "H": ["1...1", "1...1", "1...1", "11111", "1...1", "1...1", "1...1"],
-}
-
-
-def wordmark(text="UTKARSH"):
-    w, h, pitch, size = 860, 360, 19, 15
-    cols = len(text) * 6 - 1
-    x0, y0 = (w - (cols * pitch - (pitch - size))) // 2, 80
-    rx, ry = 762, 290
-    deep, mid, top = [], [], []
-    for li, ch in enumerate(text):
-        for r, row in enumerate(FONT[ch]):
-            for c, bit in enumerate(row):
-                if bit != "1":
-                    continue
-                col = li * 6 + c
-                x, y = x0 + col * pitch, y0 + r * pitch
-                drop = 0.2 + li * 0.16 + r * 0.035
-                wave = drop + 0.8 + col * 0.05
-                tile = f'width="{size}" height="{size}" rx="3"'
-                deep.append(f'<rect x="{x + 7}" y="{y + 7}" {tile} style="animation-delay:{drop:.2f}s"/>')
-                mid.append(f'<rect x="{x + 3.5}" y="{y + 3.5}" {tile} style="animation-delay:{drop:.2f}s"/>')
-                top.append(f'<rect x="{x}" y="{y}" {tile} style="animation-delay:{drop:.2f}s,{wave:.2f}s"/>')
-    css = f"""
-.deep rect,.mid rect{{animation:drop .55s cubic-bezier(.2,.9,.3,1.25) both}}
-.top rect{{fill:{TEAL};animation:drop .55s cubic-bezier(.2,.9,.3,1.25) both,wave 4s ease-in-out infinite}}
-@keyframes drop{{from{{opacity:0;transform:translateY(-34px)}}}}
-@keyframes wave{{0%,60%,100%{{fill:{TEAL}}}25%{{fill:#ecfeff}}}}
-.tag{{animation:rise .8s ease-out 1.6s both}}
-.orbit{{animation:spin 6s linear infinite;transform-origin:{rx}px {ry}px}}
-.pulse{{animation:pulse 2.6s ease-in-out infinite}}
-@keyframes spin{{to{{transform:rotate(360deg)}}}}
-@keyframes pulse{{50%{{opacity:.55}}}}
-"""
-    body = f"""
-<g class="deep" fill="#06302c">{''.join(deep)}</g>
-<g class="mid" fill="#0f766e">{''.join(mid)}</g>
-<g class="top">{''.join(top)}</g>
-<text class="mono tag" x="48" y="{ry + 6}" font-size="15" fill="{MINT}">&gt; ml · security · energy — always over 9000<tspan class="cursor">_</tspan></text>
-<g class="tag" fill="none" stroke="{MINT}"><circle cx="{rx}" cy="{ry}" r="56" stroke-opacity=".2"/><circle cx="{rx}" cy="{ry}" r="44" stroke-opacity=".35"/></g>
-<g class="orbit"><circle cx="{rx + 56}" cy="{ry}" r="4" fill="{MINT}"/></g>
-<text class="pulse" x="{rx}" y="{ry + 4}" text-anchor="middle" font-size="28" font-weight="800" fill="{MINT}">9000+</text>
-<text x="{rx}" y="{ry + 24}" text-anchor="middle" font-size="10" font-weight="700" letter-spacing="3" fill="{MINT}">POWER LEVEL</text>"""
-    return terminal(w, h, "utkarshover9000@github: ~$ ./wordmark.sh --name", text, body, css)
-
-
-# ------------------------------------------------------------ tech stack
-
-STACK = [
-    ("LANGUAGES", [("python", "Python", "#5a9fd4"), ("cplusplus", "C++", "#659ad2"), ("c", "C", "#a8b9cc"),
-                   ("openjdk", "Java", "#f89820"), ("javascript", "JavaScript", "#f7df1e"), ("typescript", "TypeScript", "#4a90e2")]),
-    ("ML & DATA", [("pytorch", "PyTorch", "#ee4c2c"), ("tensorflow", "TensorFlow", "#ff6f00"), ("scikitlearn", "scikit-learn", "#f7931e"),
-                   ("numpy", "NumPy", "#4dabcf"), ("pandas", "pandas", "#e70488"), ("jupyter", "Jupyter", "#f37626")]),
-    ("BUILD & SHIP", [("fastapi", "FastAPI", "#05b3a0"), ("react", "React", "#61dafb"), ("nextdotjs", "Next.js", "#ffffff"),
-                      ("docker", "Docker", "#2496ed"), ("git", "Git", "#f05032"), ("linux", "Linux", "#fcc624")]),
-]
-
-
-def icon_path(slug):
-    url = f"https://cdn.jsdelivr.net/npm/simple-icons@13/icons/{slug}.svg"
-    raw = urllib.request.urlopen(url, timeout=30).read().decode()
-    return raw.split(' d="', 1)[1].split('"', 1)[0]
-
-
-def tech_stack():
-    w, h, tile, gap, x0 = 860, 440, 76, 26, 206
-    parts, n = [], 0
-    for gi, (group, items) in enumerate(STACK):
-        y = 104 + gi * 108
-        parts.append(f'<text class="mono rise" x="48" y="{y + 42}" font-size="11" font-weight="700" letter-spacing="2" fill="{MINT}" style="animation-delay:{.2 + gi * .3:.1f}s">{escape(group)}</text>')
-        for i, (slug, name, color) in enumerate(items):
-            x = x0 + i * (tile + gap)
-            d = icon_path(slug)
-            delay = 0.3 + n * 0.07
-            parts.append(f"""<g class="tile" style="animation-delay:{delay:.2f}s,{delay + 1:.2f}s">
-  <rect x="{x}" y="{y}" width="{tile}" height="{tile}" rx="16" fill="#0b2624" stroke="{color}" stroke-opacity=".45"/>
-  <rect x="{x}" y="{y}" width="{tile}" height="{tile}" rx="16" fill="{color}" opacity=".07"/>
-  <path transform="translate({x + 20} {y + 20}) scale(1.5)" d="{d}" fill="{color}"/>
-  <text x="{x + tile / 2}" y="{y + tile + 17}" text-anchor="middle" font-size="12" font-weight="600" fill="#ccfbf1">{escape(name)}</text>
-</g>""")
-            n += 1
-    css = """
-.tile{animation:pop .6s cubic-bezier(.2,.9,.3,1.3) both,float 5s ease-in-out infinite}
-@keyframes pop{from{opacity:0;transform:translateY(14px) scale(.9)}}
-@keyframes float{50%{transform:translateY(-3px)}}
-"""
-    body = f"""
-<text x="48" y="66" font-size="26" font-weight="800" fill="{INK}">Tech Stack</text>
-<text class="mono" x="{w - 48}" y="64" text-anchor="end" font-size="13" font-weight="600" fill="{MINT}">&gt; stack.scan<tspan class="cursor"> _</tspan></text>
-{''.join(parts)}"""
-    names = ", ".join(n for _, items in STACK for _, n, _ in items)
-    return aurora(w, h, f"Tech stack: {names}", body, css)
 
 
 # ------------------------------------------------------------------ data
@@ -464,52 +362,52 @@ QUOTES = [
     ("Measuring programming progress by lines of code is like measuring aircraft building progress by weight.", "Bill Gates"),
     ("Truth can only be found in one place: the code.", "Robert C. Martin"),
     ("Correlation does not imply causation.", "Statistics 101"),
-    ("It's over 9000!", "Vegeta"),
 ]
 
 
-def quote():
-    index = datetime.date.today().toordinal() % len(QUOTES)
-    text, author = QUOTES[index]
-    lines = textwrap.wrap(f"“{text}”", 58)
-    w, h = 860, 150 + 34 * len(lines)
-    spans = "".join(f'<tspan x="56" dy="{0 if i == 0 else 34}">{escape(line)}</tspan>' for i, line in enumerate(lines))
-    css = ".ring{animation:spin 24s linear infinite;transform-origin:770px 66px}@keyframes spin{to{transform:rotate(360deg)}}"
-    body = f"""
-<g class="ring" opacity=".35" fill="none" stroke="{MINT}"><circle cx="770" cy="66" r="30"/><circle cx="770" cy="66" r="18"/><circle cx="800" cy="66" r="3" fill="{MINT}"/></g>
-<text class="label" x="56" y="58">DEV QUOTE</text>
-<text class="mono" x="590" y="58" font-size="13" font-weight="600" fill="{MINT}">&gt; quote.random<tspan class="cursor"> _</tspan></text>
-<text class="rise" x="56" y="98" font-size="24" font-weight="600" fill="{INK}">{spans}</text>
-<text class="mono rise" x="56" y="{112 + 34 * len(lines)}" font-size="14" fill="{MINT}" style="animation-delay:.5s">— {escape(author)}</text>
-<text class="mono" x="{w - 40}" y="{h - 12}" text-anchor="end" font-size="11" fill="{MINT}" opacity=".55">#{index + 1:02d} · refreshed daily</text>"""
-    return aurora(w, h, f"Dev quote of the day: {text} by {author}", body, css)
+QUOTE_START, QUOTE_END = "<!-- quote:start -->", "<!-- quote:end -->"
+
+
+def quote_markdown(today=None):
+    today = today or datetime.date.today()
+    text, author = QUOTES[today.toordinal() % len(QUOTES)]
+    return f"> {text}\n>\n> — {author}"
+
+
+def update_quote(readme):
+    body = readme.read_text(encoding="utf-8")
+    head, rest = body.split(QUOTE_START, 1)
+    _, tail = rest.split(QUOTE_END, 1)
+    new = f"{head}{QUOTE_START}\n{quote_markdown()}\n{QUOTE_END}{tail}"
+    if new != body:
+        readme.write_text(new, encoding="utf-8")
+    print(f"{readme}: {'updated' if new != body else 'unchanged'}")
 
 
 # ------------------------------------------------------------------ main
 
 def main():
-    mode, out = sys.argv[1], Path(sys.argv[2])
-    out.mkdir(parents=True, exist_ok=True)
-    if mode == "static":
-        cards = {"wordmark.svg": wordmark(), "tech-stack.svg": tech_stack()}
-    else:
-        user = fetch_profile()
-        cal = user["contributionsCollection"]["contributionCalendar"]
-        days = [d for wk in cal["weeks"] for d in wk["contributionDays"]]
-        stats = {
-            "repos": user["repositories"]["totalCount"],
-            "stars": sum(r["stargazerCount"] for r in user["repositories"]["nodes"]),
-            "contributions": cal["totalContributions"],
-            "active": sum(1 for d in days if d["contributionCount"]),
-        }
-        cards = {
-            "scan.svg": scan(user, stats),
-            "contrib.svg": contrib(cal["weeks"], cal["totalContributions"]),
-            "dev-quote.svg": quote(),
-        }
+    mode, target = sys.argv[1], Path(sys.argv[2])
+    if mode == "quote":
+        update_quote(target)
+        return
+    target.mkdir(parents=True, exist_ok=True)
+    user = fetch_profile()
+    cal = user["contributionsCollection"]["contributionCalendar"]
+    days = [d for wk in cal["weeks"] for d in wk["contributionDays"]]
+    stats = {
+        "repos": user["repositories"]["totalCount"],
+        "stars": sum(r["stargazerCount"] for r in user["repositories"]["nodes"]),
+        "contributions": cal["totalContributions"],
+        "active": sum(1 for d in days if d["contributionCount"]),
+    }
+    cards = {
+        "scan.svg": scan(user, stats),
+        "contrib.svg": contrib(cal["weeks"], cal["totalContributions"]),
+    }
     for name, content in cards.items():
-        (out / name).write_text(content, encoding="utf-8")
-        print(f"{out / name}: {len(content) // 1024} KB")
+        (target / name).write_text(content, encoding="utf-8")
+        print(f"{target / name}: {len(content) // 1024} KB")
 
 
 if __name__ == "__main__":
