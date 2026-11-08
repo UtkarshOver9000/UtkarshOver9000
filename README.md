@@ -41,9 +41,9 @@ FastAPI · DuckDB · React · Next.js · Three.js · Docker · GitHub Actions
 ## Quote of the day
 
 <!-- quote:start -->
-> Talk is cheap. Show me the code.
+> Simplicity is prerequisite for reliability.
 >
-> — Linus Torvalds
+> — Edsger W. Dijkstra
 <!-- quote:end -->
 
 ---
