@@ -41,7 +41,7 @@ FastAPI · DuckDB · React · Next.js · Three.js · Docker · GitHub Actions
 ## Quote of the day
 
 <!-- quote:start -->
-> Simplicity is prerequisite for reliability.
+> Program testing can be used to show the presence of bugs, but never to show their absence.
 >
 > — Edsger W. Dijkstra
 <!-- quote:end -->
