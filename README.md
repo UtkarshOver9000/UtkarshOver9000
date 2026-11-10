@@ -41,9 +41,9 @@ FastAPI · DuckDB · React · Next.js · Three.js · Docker · GitHub Actions
 ## Quote of the day
 
 <!-- quote:start -->
-> Program testing can be used to show the presence of bugs, but never to show their absence.
+> The first principle is that you must not fool yourself, and you are the easiest person to fool.
 >
-> — Edsger W. Dijkstra
+> — Richard Feynman
 <!-- quote:end -->
 
 ---
