@@ -41,9 +41,9 @@ FastAPI · DuckDB · React · Next.js · Three.js · Docker · GitHub Actions
 ## Quote of the day
 
 <!-- quote:start -->
-> The first principle is that you must not fool yourself, and you are the easiest person to fool.
+> Make it work, make it right, make it fast.
 >
-> — Richard Feynman
+> — Kent Beck
 <!-- quote:end -->
 
 ---
