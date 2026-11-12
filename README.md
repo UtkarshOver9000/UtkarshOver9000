@@ -41,9 +41,9 @@ FastAPI · DuckDB · React · Next.js · Three.js · Docker · GitHub Actions
 ## Quote of the day
 
 <!-- quote:start -->
-> Make it work, make it right, make it fast.
+> If you torture the data long enough, it will confess.
 >
-> — Kent Beck
+> — Ronald Coase
 <!-- quote:end -->
 
 ---
