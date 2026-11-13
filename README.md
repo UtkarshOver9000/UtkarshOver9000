@@ -41,9 +41,9 @@ FastAPI · DuckDB · React · Next.js · Three.js · Docker · GitHub Actions
 ## Quote of the day
 
 <!-- quote:start -->
-> If you torture the data long enough, it will confess.
+> Programs must be written for people to read, and only incidentally for machines to execute.
 >
-> — Ronald Coase
+> — Harold Abelson
 <!-- quote:end -->
 
 ---
