@@ -41,9 +41,9 @@ FastAPI · DuckDB · React · Next.js · Three.js · Docker · GitHub Actions
 ## Quote of the day
 
 <!-- quote:start -->
-> Programs must be written for people to read, and only incidentally for machines to execute.
+> Security is a process, not a product.
 >
-> — Harold Abelson
+> — Bruce Schneier
 <!-- quote:end -->
 
 ---
