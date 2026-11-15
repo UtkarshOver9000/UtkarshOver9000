@@ -41,9 +41,9 @@ FastAPI · DuckDB · React · Next.js · Three.js · Docker · GitHub Actions
 ## Quote of the day
 
 <!-- quote:start -->
-> Security is a process, not a product.
+> In God we trust. All others must bring data.
 >
-> — Bruce Schneier
+> — W. Edwards Deming
 <!-- quote:end -->
 
 ---
