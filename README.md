@@ -41,9 +41,9 @@ FastAPI · DuckDB · React · Next.js · Three.js · Docker · GitHub Actions
 ## Quote of the day
 
 <!-- quote:start -->
-> In God we trust. All others must bring data.
+> The best way to predict the future is to invent it.
 >
-> — W. Edwards Deming
+> — Alan Kay
 <!-- quote:end -->
 
 ---
