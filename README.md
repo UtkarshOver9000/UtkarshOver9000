@@ -41,9 +41,9 @@ FastAPI · DuckDB · React · Next.js · Three.js · Docker · GitHub Actions
 ## Quote of the day
 
 <!-- quote:start -->
-> The best way to predict the future is to invent it.
+> Any sufficiently advanced technology is indistinguishable from magic.
 >
-> — Alan Kay
+> — Arthur C. Clarke
 <!-- quote:end -->
 
 ---
