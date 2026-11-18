@@ -41,9 +41,9 @@ FastAPI · DuckDB · React · Next.js · Three.js · Docker · GitHub Actions
 ## Quote of the day
 
 <!-- quote:start -->
-> Any sufficiently advanced technology is indistinguishable from magic.
+> First, solve the problem. Then, write the code.
 >
-> — Arthur C. Clarke
+> — John Johnson
 <!-- quote:end -->
 
 ---
