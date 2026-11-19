@@ -41,9 +41,9 @@ FastAPI · DuckDB · React · Next.js · Three.js · Docker · GitHub Actions
 ## Quote of the day
 
 <!-- quote:start -->
-> First, solve the problem. Then, write the code.
+> Debugging is twice as hard as writing the code in the first place.
 >
-> — John Johnson
+> — Brian Kernighan
 <!-- quote:end -->
 
 ---
