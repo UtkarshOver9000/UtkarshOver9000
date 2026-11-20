@@ -41,9 +41,9 @@ FastAPI · DuckDB · React · Next.js · Three.js · Docker · GitHub Actions
 ## Quote of the day
 
 <!-- quote:start -->
-> Debugging is twice as hard as writing the code in the first place.
+> Simple things should be simple, complex things should be possible.
 >
-> — Brian Kernighan
+> — Alan Kay
 <!-- quote:end -->
 
 ---
