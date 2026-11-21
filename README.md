@@ -41,9 +41,9 @@ FastAPI · DuckDB · React · Next.js · Three.js · Docker · GitHub Actions
 ## Quote of the day
 
 <!-- quote:start -->
-> Simple things should be simple, complex things should be possible.
+> Code is like humor. When you have to explain it, it's bad.
 >
-> — Alan Kay
+> — Cory House
 <!-- quote:end -->
 
 ---
