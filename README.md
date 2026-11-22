@@ -41,9 +41,9 @@ FastAPI · DuckDB · React · Next.js · Three.js · Docker · GitHub Actions
 ## Quote of the day
 
 <!-- quote:start -->
-> Code is like humor. When you have to explain it, it's bad.
+> Fix the cause, not the symptom.
 >
-> — Cory House
+> — Steve Maguire
 <!-- quote:end -->
 
 ---
