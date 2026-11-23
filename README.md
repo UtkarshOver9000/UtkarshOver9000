@@ -41,9 +41,9 @@ FastAPI · DuckDB · React · Next.js · Three.js · Docker · GitHub Actions
 ## Quote of the day
 
 <!-- quote:start -->
-> Fix the cause, not the symptom.
+> Without data, you're just another person with an opinion.
 >
-> — Steve Maguire
+> — W. Edwards Deming
 <!-- quote:end -->
 
 ---
