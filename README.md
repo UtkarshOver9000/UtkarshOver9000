@@ -41,9 +41,9 @@ FastAPI · DuckDB · React · Next.js · Three.js · Docker · GitHub Actions
 ## Quote of the day
 
 <!-- quote:start -->
-> Without data, you're just another person with an opinion.
+> Amateurs hack systems, professionals hack people.
 >
-> — W. Edwards Deming
+> — Bruce Schneier
 <!-- quote:end -->
 
 ---
