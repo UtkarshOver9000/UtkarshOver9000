@@ -41,9 +41,9 @@ FastAPI · DuckDB · React · Next.js · Three.js · Docker · GitHub Actions
 ## Quote of the day
 
 <!-- quote:start -->
-> Amateurs hack systems, professionals hack people.
+> The most dangerous phrase in the language is: we've always done it this way.
 >
-> — Bruce Schneier
+> — Grace Hopper
 <!-- quote:end -->
 
 ---
