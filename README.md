@@ -41,9 +41,9 @@ FastAPI · DuckDB · React · Next.js · Three.js · Docker · GitHub Actions
 ## Quote of the day
 
 <!-- quote:start -->
-> The most dangerous phrase in the language is: we've always done it this way.
+> It's harder to read code than to write it.
 >
-> — Grace Hopper
+> — Joel Spolsky
 <!-- quote:end -->
 
 ---
