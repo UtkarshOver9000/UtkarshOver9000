@@ -41,9 +41,9 @@ FastAPI · DuckDB · React · Next.js · Three.js · Docker · GitHub Actions
 ## Quote of the day
 
 <!-- quote:start -->
-> It's harder to read code than to write it.
+> Measuring programming progress by lines of code is like measuring aircraft building progress by weight.
 >
-> — Joel Spolsky
+> — Bill Gates
 <!-- quote:end -->
 
 ---
