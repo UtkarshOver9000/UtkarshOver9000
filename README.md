@@ -41,9 +41,9 @@ FastAPI · DuckDB · React · Next.js · Three.js · Docker · GitHub Actions
 ## Quote of the day
 
 <!-- quote:start -->
-> Measuring programming progress by lines of code is like measuring aircraft building progress by weight.
+> Truth can only be found in one place: the code.
 >
-> — Bill Gates
+> — Robert C. Martin
 <!-- quote:end -->
 
 ---
